@@ -13,6 +13,7 @@
   &__cabecalho {
     color: var(--primary);
 
+
     &__conteudo {
       padding: 10px;
       border-bottom: 2px solid green;
@@ -25,11 +26,10 @@
 
     &:last-child {
       .tabela__conteudo {
-        border-bottom: none;
+        margin-bottom: none;
       }
     }
   }
-
   &__conteudo {
     padding: 10px;
     border-bottom: 1px solid var(--cinza-claro);
