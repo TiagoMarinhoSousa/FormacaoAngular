@@ -1,4 +1,19 @@
+<!-- Aula 6.5 http
+
+<app-nova-transferencia></app-nova-transferencia>
+
+//retirado evento de transferir
 <app-nova-transferencia (aoTransferir)="transferir($event)"></app-nova-transferencia>
 
-<app-extrato></app-extrato>
+<app-extrato></app-extrato> -->
+
+<!-- aula 7 -->
+<header>
+  <a routerLink="extrato" routerLinkActive="ativo">Extrato</a>
+  <a routerLink="nova-transferencia" routerLinkActive="ativo">Nova transferência</a>
+</header>
+<main>
+  <router-outlet></router-outlet>
+
+</main>
 

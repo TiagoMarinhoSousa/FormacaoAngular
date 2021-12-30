@@ -31,9 +31,16 @@ constructor(private httpClient: HttpClient) {
     return this.httpClient.get<Transferencia[]>(this.url);
   }
 
-  adicionar(transferencia: any) {
-    this.hidratar(transferencia)
-    this.listaTransferencia.push(transferencia);
+  // adicionar(transferencia: any) {
+  //   this.hidratar(transferencia)
+  //   this.listaTransferencia.push(transferencia);
+  // }
+
+  //aula 6.5 - API Rest - HttpClient
+
+  adicionar(transferencia: Transferencia): Observable<Transferencia> {
+    this.hidratar(transferencia);
+    return this.httpClient.post<Transferencia>(this.url, transferencia);
   }
 
   //regras de negócio
